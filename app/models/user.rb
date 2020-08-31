@@ -4,6 +4,10 @@ require 'openssl'
 
 # Модель пользователя.
 class User < ActiveRecord::Base
+
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  VALID_USER_REGEX = /\A[a-zA-Z0-9_]+\Z/i
+
   ITERATIONS = 20_000
   DIGEST = OpenSSL::Digest::SHA256.new
 
@@ -14,6 +18,10 @@ class User < ActiveRecord::Base
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
   validates :password, presence: true, on: :create
+
+  validates :username, length: { maximum: 40 }
+  validates :email, format: { with: VALID_EMAIL_REGEX }
+  validates :username, format: { with: VALID_USER_REGEX }
 
   validates_confirmation_of :password
 
