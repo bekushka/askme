@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ASKme - это подобие глобальной социальной сети "ASKfm", где Вы можете открыто или анонимно спросить человека о том, что Вас интересует. Также, другие люди тоже смогут задавать Вам вопросы. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*программа создана при прохождении курса goodprogrammer.ru
