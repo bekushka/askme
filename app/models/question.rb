@@ -1,8 +1,8 @@
 # (c) goodprogrammer.ru
 
 # Модель вопроса.
-class Question < ApplicationRecord
+class Question < ActiveRecord::Base
   belongs_to :user
 
-  validates :text, presence: true, length: { maximum: 255 }
+  validates :user, :text, presence: true
 end
