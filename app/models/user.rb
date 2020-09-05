@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   has_many :questions, dependent: :destroy
   has_secure_password validations: false
+  
+  before_validation :username_to_downcase, :email_to_downcase
   before_save :encrypt_password
 
   validates :username, presence: true, length: {maximum: 40}, format: {with: VALID_USERNAME_REGEX}
@@ -47,5 +49,13 @@ class User < ApplicationRecord
       self.password_hash = User.hash_to_string(OpenSSL::PKCS5.pbkdf2_hmac(
         password, password_salt, ITERATIONS, DIGEST.length, DIGEST))
     end
+  end
+  
+  def username_to_downcase
+    username.downcase! if username
+  end
+
+  def email_to_downcase
+    email.downcase! if email
   end
 end
