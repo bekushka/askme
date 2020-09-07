@@ -24,7 +24,7 @@ class User < ApplicationRecord
   validates :password, confirmation: true
 
   def self.authenticate(email, password)
-    user = find_by(email: email)
+    user = find_by(email: email&.downcase)
 
     return unless user.present?
 
@@ -52,10 +52,10 @@ class User < ApplicationRecord
   end
   
   def username_to_downcase
-    username.downcase! if username
+    username&.downcase!
   end
 
   def email_to_downcase
-    email.downcase! if email
+    email&.downcase!
   end
 end

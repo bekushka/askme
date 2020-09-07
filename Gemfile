@@ -12,6 +12,7 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'webpacker', '~> 4.0'
+gem 'devise-jwt', '~> 0.7.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 
 # Use Active Storage variant
