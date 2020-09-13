@@ -19,3 +19,5 @@
       few: '%{count} безответных'
       many: '%{count} безответных'
       other: 'безответные'
+
+  config.i18n.default_locale = :ru
