@@ -8,6 +8,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'rails_12factor'
 gem 'uglifier'
 gem 'jquery-rails'
+gem 'rails-i18n', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
 
 group :production do
