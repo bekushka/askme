@@ -1,21 +1,21 @@
   ru:
     question:
       zero: 'нет вопросов'
-      one: 'вопрос'
-      few: 'вопроса'
-      many: 'вопросов'
-      other: 'вопросов'
+      one: '%{count} вопрос'
+      few: '%{count} вопроса'
+      many: '%{count} вопросов'
+      other: 'вопросы'
 
     answer:
       zero: 'нет ответов'
-      one: 'ответ'
-      few: 'ответа'
-      many: 'ответов'
-      other: 'ответов'
+      one: '%{count} ответ'
+      few: '%{count} ответа'
+      many: '%{count} ответов'
+      other: 'ответы'
 
     unanswered:
       zero: 'безответных'
-      one: 'безответный'
-      few: 'безответных'
-      many: 'безответных'
-      other: 'безответных'
+      one: '%{count} безответный'
+      few: '%{count} безответных'
+      many: '%{count} безответных'
+      other: 'безответные'
