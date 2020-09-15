@@ -9,7 +9,7 @@ module ApplicationHelper
     if user.avatar_url.present?
       user.avatar_url
     else
-      #asset_pack_path('media/images/avatar.jpg')
+      asset_pack_path('media/images/avatar.jpg')
     end
   end
 

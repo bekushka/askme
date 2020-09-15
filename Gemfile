@@ -23,7 +23,7 @@ end
 
 group :development do
   gem 'sqlite3', '~> 1.4'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
     #gem 'listen', '~> 3.2'
 end
 
