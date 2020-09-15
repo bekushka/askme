@@ -1,8 +1,8 @@
 // This is a manifest file that'll be compiled into application.js, which will
 // include all the files listed below.
 //
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts,
-// vendor/assets/javascripts, or any plugin's vendor/assets/javascripts
+// Any JavaScript/Coffee file within this directory, lib/assets/frontend,
+// vendor/assets/frontend, or any plugin's vendor/assets/frontend
 // directory can be referenced here using a relative path.
 //
 // It's not advisable to add code directly here, but if you do, it'll appear
@@ -15,6 +15,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+require("@rails/ujs").start()
+
+import 'bootstrap/dist/js/bootstrap'
+import '../styles/application'
+
+require("@rails/activestorage").start()
+require("channels")
+
+const images = require.context('../images', true)
 
 // Этот код добавляет обработчик события выдвигания формы при клике на кнопку
 // «Задать вопрос», которая видна только, когда страница открыта в маленьком

@@ -12,7 +12,7 @@ require "action_mailbox/engine"
 require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
-require "sprockets/railtie"
+
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -31,5 +31,14 @@ module Askme
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.time_zone = 'Tashkent'
+
+    config.i18n.default_locale = :en
+    config.i18n.locale = :ru
+
+    config.i18n.fallbacks = [:en]
+
+    config.assets.compile = false
   end
 end
