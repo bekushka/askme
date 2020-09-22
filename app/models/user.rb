@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   VALID_USERNAME_REGEX = /\A\w+\z/
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  VALID_COLOR_REGEX = /\A#?(?:[\w]{3}){1,2}\z/i
+  VALID_COLOR_REGEX = /\A#(?:[0-9a-fA-F]{3}){1,2}\z/i
 
   attr_accessor :password
 
