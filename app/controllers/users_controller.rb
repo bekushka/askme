@@ -17,9 +17,9 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @tags = Tag.with_questions
   end
 
-  # Действие new будет отзываться по адресу /users/new
   def new
     # Если пользователь уже авторизован, ему не нужна новая учетная запись,
     # отправляем его на главную с сообщением.
