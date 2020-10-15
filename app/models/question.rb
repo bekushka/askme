@@ -15,6 +15,6 @@ class Question < ApplicationRecord
     self.tags =
       "#{text} #{answer}".downcase.scan(Tag::TAG_REGEX).uniq.map do |tag|
         Tag.find_or_create_by(name: tag.delete('#'))
-    end
+      end
   end
 end
