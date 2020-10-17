@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'rails-i18n', '~> 6.0.0'
 gem 'webpacker', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'recaptcha', require: 'recaptcha/rails'
 
 group :production do
   gem 'pg', '~> 0.21'
