@@ -15,7 +15,6 @@ class UsersController < ApplicationController
 
   def create
     redirect_to root_url, alert: 'Вы уже залогинены' if current_user.present?
-
     @user = User.new(user_params)
 
     if @user.save
@@ -44,9 +43,7 @@ class UsersController < ApplicationController
 
   def show
     @questions = @user.questions.order(created_at: :desc)
-
     @new_question = @user.questions.build
-
     @questions_count = @questions.count
     @answers_count = @questions.where.not(answer: nil).count
     @unanswered_count = @questions_count - @answers_count

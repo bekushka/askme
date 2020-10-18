@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'users#index'
 
-  resources :users, except: [:destroy]
+  resources :users
   resource :session, only: [:new, :create, :destroy]
-  resources :questions
+  resources :questions, except: [:show, :new, :index]
   resources :tags, param: :name, only: :show
 end
