@@ -16,6 +16,7 @@ $ bundle install
 $ yarn install
 $ rails db:setup
 $ rails db:seed
+$ rails s
 ```
 
 Ваше приложение находится по адресу http://localhost:3000/
